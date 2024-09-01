@@ -17,14 +17,14 @@ function passwordCheck(req,res,next){
 }
 app.use(passwordCheck);
 app.get("/",(req,res)=>{
-    res.sendFile(__dirname+"/public/index.html");
+    res.sendFile(__dirname+"/index.html");
 });
 app.post("/check",(req,res)=>{
     if(isAuthorized){
         res.sendFile(__dirname+"/public/secret.html");
     }
     else{
-        res.sendFile(__dirname+"/public/index.html");
+        res.sendFile(__dirname+"/index.html");
     }
 })
 app.listen(port,()=>{
