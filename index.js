@@ -19,7 +19,7 @@ app.use(passwordCheck);
 app.get("/",(req,res)=>{
     res.sendFile(__dirname+"/index.html");
 });
-app.post("/check",(req,res)=>{
+app.post("/submit",(req,res)=>{
     if(isAuthorized){
         res.sendFile(__dirname+"/secret.html");
     }
